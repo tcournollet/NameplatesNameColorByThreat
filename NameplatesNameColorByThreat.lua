@@ -1,7 +1,3 @@
-local frameName = "NameplatesNameColorByThreatFrame";
-local frame = _G[frameName];
-local isFrameExist = false;
-
 local function updateNameplatesNameColor(frame)
     local unit = frame.displayedUnit;
 
@@ -22,6 +18,9 @@ local function updateNameplatesNameColor(frame)
     end
 end
 
+local frameName = "NameplatesNameColorByThreatFrame";
+local frame = _G[frameName];
+local isFrameExist = false;
 if (frame and frame:GetObjectType() == "Frame") then
     isFrameExist = true;
 end
@@ -39,7 +38,7 @@ if  (not isFrameExist) then
                 local trackThreatFrameName = "UpdateNameColorByThreatFrame";
                 local trackThreatFrame = _G[trackThreatFrameName];
 
-                if (not frame or frame:GetObjectType() ~= "Frame") then
+                if (not trackThreatFrame or trackThreatFrame:GetObjectType() ~= "Frame") then
                     local trackThreatFrame = CreateFrame("Frame", trackThreatFrameName);
                     trackThreatFrame:RegisterEvent("UNIT_THREAT_SITUATION_UPDATE");
 
