@@ -1,0 +1,6 @@
+## Interface: 100002
+## Title: NameplatesNameColorByThreat
+## Author: Kdo2noel
+## Version: 1.0.0
+
+NameplatesNameColorByThreat.lua
