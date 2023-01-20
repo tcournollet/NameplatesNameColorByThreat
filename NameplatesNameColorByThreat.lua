@@ -18,15 +18,15 @@ local function updateNameplatesNameColor(frame)
     end
 end
 
-local frameName = "NameplatesNameColorByThreatFrame";
-local frame = _G[frameName];
-local isFrameExist = false;
-if (frame and frame:GetObjectType() == "Frame") then
-    isFrameExist = true;
+local initFrameName = "NameplatesNameColorByThreatFrame";
+local initFrame = _G[initFrameName];
+local isInitFrameExist = false;
+if (initFrame and initFrame:GetObjectType() == "Frame") then
+    isInitFrameExist = true;
 end
 
-if  (not isFrameExist) then
-    local frame = CreateFrame("Frame", frameName);
+if  (not isInitFrameExist) then
+    initFrame = CreateFrame("Frame", initFrameName);
     frame:RegisterEvent("PLAYER_ENTERING_WORLD");
 
     local function onEvent(self, event, ...)
@@ -56,5 +56,5 @@ if  (not isFrameExist) then
         end
     end
 
-    frame:SetScript("OnEvent", onEvent);
+    initFrame:SetScript("OnEvent", onEvent);
 end
