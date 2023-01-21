@@ -2,5 +2,6 @@
 ## Title: NameplatesNameColorByThreat
 ## Author: Kdo2noel
 ## Version: 1.0.0
+## A very Lightweight addon to change the color of nameplates name based on the player's threat to the unit
 
 NameplatesNameColorByThreat.lua

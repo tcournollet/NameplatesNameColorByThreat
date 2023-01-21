@@ -27,12 +27,12 @@ end
 
 if  (not isInitFrameExist) then
     initFrame = CreateFrame("Frame", initFrameName);
-    frame:RegisterEvent("PLAYER_ENTERING_WORLD");
+    initFrame:RegisterEvent("PLAYER_ENTERING_WORLD");
 
     local function onEvent(self, event, ...)
         if (event == "PLAYER_ENTERING_WORLD") then
             local initialLogin, reloadingUI = ...;
-            if (initialLogin or reloadingUI) then                
+            if (initialLogin or reloadingUI) then
                 hooksecurefunc("CompactUnitFrame_UpdateName", updateNameplatesNameColor)
 
                 local trackThreatFrameName = "UpdateNameColorByThreatFrame";
